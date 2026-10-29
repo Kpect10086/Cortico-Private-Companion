@@ -1,0 +1,93 @@
+{
+  "name": "cortico-world-private-companion",
+  "version": "6.7.0-cortico.3",
+  "type": "module",
+  "main": "./index.ts",
+  "keywords": [
+    "cortico-world"
+  ],
+  "description": "非官方 Cortico 移植版：我会永远陪着你；原作 menglimi/astrbot_plugin_private_companion，移植与集成维护 Kpect10086。",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "我会永远陪着你 · 非官方移植",
+    "webUiClient": "./dist/webui.js",
+    "describe": "describe.json",
+    "tags": [
+      "experimental",
+      "sensitive-data",
+      "injection-risk",
+      "requires-extension",
+      "high-cost",
+      "unofficial-api",
+      "internal-state"
+    ]
+  },
+  "author": {
+    "name": "menglimi",
+    "url": "https://github.com/menglimi"
+  },
+  "contributors": [
+    {
+      "name": "Kpect10086",
+      "url": "https://github.com/Kpect10086",
+      "role": "Cortico port maintainer"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kpect10086/Cortico-Private-Companion.git"
+  },
+  "homepage": "https://github.com/Kpect10086/Cortico-Private-Companion#readme",
+  "bugs": {
+    "url": "https://github.com/Kpect10086/Cortico-Private-Companion/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "files": [
+    "*.html",
+    "*.mjs",
+    "*.mts",
+    "*.py",
+    "*.ts",
+    "CHANGELOG.md",
+    "LICENSE*",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "UPSTREAM_PERMISSIONS.md",
+    "base",
+    "describe.json",
+    "dist",
+    "docs",
+    "native-tools.json",
+    "patches",
+    "scripts",
+    "upstream-provenance.json",
+    "vendor"
+  ],
+  "scripts": {
+    "test": "node scripts/audit-release.mjs && tsx scripts/test-registry.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.web.json --noEmit",
+    "build:web": "node scripts/build-web.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.19.2",
+    "cortico": "0.2.8"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./addon-world.ts": "./addon-world.ts",
+    "./package.json": "./package.json"
+  },
+  "maintainers": [
+    {
+      "name": "Kpect10086",
+      "url": "https://github.com/Kpect10086"
+    }
+  ]
+}
